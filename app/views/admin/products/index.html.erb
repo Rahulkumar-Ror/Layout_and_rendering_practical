@@ -1,0 +1,21 @@
+<% if flash[:errors] %>
+  <% flash[:errors].each do |error| %>
+    <p style = "color:red"><%= error %></p>
+  <% end %>
+<% end %>
+
+<h1>List of all Product</h1>
+<center>
+  <table>
+	  <th>Title of product</th>
+		<th>Description of product</th>
+		<th>Quantity of Product</th>
+		
+		<th colspan=3>Action</th>
+		<% @products.each do |product| %>
+		  <td><%= product.title %></td>
+			<td><%= product.description %></td>
+      <td><%= product.title %></td>
+		<% end %>	 
+	</table>
+</center>
