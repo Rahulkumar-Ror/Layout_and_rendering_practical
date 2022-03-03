@@ -1,0 +1,11 @@
+<div class="col-lg-6 mx-lg-auto">
+<div class="card shadow">
+<div class="card-header">
+<h2 class="card-title text-center", style="color:red;">User => Admin</h2>
+<body align = "center" >
+  <p class="notice" style="color: red"><%= notice %></p>
+  <p class="alert" style="color: red"><%= alert %></p>
+
+  <%= yield %>
+  <h2><b><%= link_to "Go to Product Path", admin_products_path, method: :get %></b></h2>
+</body>

@@ -1,0 +1,19 @@
+<div class="col-lg-6 mx-lg-auto">
+<div class="card shadow">
+<div class="card-header">
+<h2 class="card-title text-center", style="color:red;">Place a order </h2>
+<%= form_with(model: [:admin, @product, @order], local: true) do |form| %>
+
+<div> 
+  <td><%= form.hidden_field :product_id %></td>
+</div>
+<div>
+  <%= form.label :quantity %>
+  <%= form.number_field :quantity, class: "form-control", placeholder: "$$$$$" %>
+</div>
+
+<div>
+  <%= form.submit %>
+</div>
+
+<% end %>

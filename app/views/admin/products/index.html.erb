@@ -1,21 +1,40 @@
+<div class="col-lg-6 mx-lg-auto">
+<div class="card shadow">
+<div class="card-header">
 <% if flash[:errors] %>
   <% flash[:errors].each do |error| %>
     <p style = "color:red"><%= error %></p>
   <% end %>
 <% end %>
-
-<h1>List of all Product</h1>
+<h2 class="card-title text-center", style="color:red;">Available Product List</h2>
 <center>
   <table>
+	  <th>Product ID</th>
 	  <th>Title of product</th>
 		<th>Description of product</th>
-		<th>Quantity of Product</th>
 		
 		<th colspan=3>Action</th>
 		<% @products.each do |product| %>
+		<tr>
+		  <td><%= product.id %></td>
 		  <td><%= product.title %></td>
-			<td><%= product.description %></td>
-      <td><%= product.title %></td>
+			<td><%= product.description %></td>    
+			<td><%= button_to "Show", admin_product_path(product.id), method: :get %></td>
+      <td><%= button_to "Edit", edit_admin_product_path(product.id), method: :get %></td>
+      <td><%= button_to "Delete", admin_product_path(product.id), method: :delete %></td>
+		</tr>
 		<% end %>	 
 	</table>
+</center>
+
+<center>
+<div>
+  <%= link_to "Add a product", new_admin_product_path %></br>
+</div>
+<p>------------------------------------------------</p>
+</center>
+<center>
+<div>
+  <%= button_to "sign Out", destroy_user_session_path(@order), method: :delete %>
+</div>
 </center>

@@ -1,2 +1,17 @@
-<h1>Orders#show</h1>
-<p>Find me in app/views/orders/show.html.erb</p>
+<div class="col-lg-6 mx-lg-auto">
+<div class="card shadow">
+<div class="card-header">
+<h2 class="card-title text-center", style="color:red;">Order Detials</h2>
+<center>
+<table> 
+  <th>Orderr ID</th>
+  <th>Quantity</th>
+  <th colspan=1>Actions</th>
+  <tr>
+    <td><%= @order.id %></td>
+    <td><%= @order.quantity %></td>
+
+    <td><%= button_to "Back", admin_products_path,method: :get %></td>
+  </tr>
+</table>
+</center>
