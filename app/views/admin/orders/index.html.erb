@@ -10,13 +10,11 @@
     <th>Title</th>
     <th>Quantity</th>
     <th>Total Price</th>
-    <% @orders.each do |order| %>
-    <tr>
-      <td><%= order.product.title %></td>
-      <td><%= order.quantity %></td>
-      <td><%= order.total_price %></td>
-    </tr>
-    <% end %>
+      <% @orders.each do |order| %>
+        <tr>
+          <%= render 'order' %>
+        </tr>
+      <% end %>
   </table>
 </center>
 
@@ -24,4 +22,4 @@
   <div> 
     <%= link_to "Back", admin_products_path %>
   </div>
-</
+</center>

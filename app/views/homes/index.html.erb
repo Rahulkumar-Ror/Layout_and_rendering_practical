@@ -2,12 +2,10 @@
 <center>
 <% if user_signed_in? %>
 Signed in as <%= current_user.email %>. Not you? <br/><br/>
-<%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-<%= link_to "Edit Profile", edit_user_registration_path, method: :get%>
-
+<%= link_to "Sign out", destroy_user_session_path, method: :delete  , class:"btn btn-danger float-right mb-3 mt-3"%>
+<%= link_to "Edit Profile", edit_user_registration_path, method: :get, class:"btn btn-success float-right mb-3 mt-3" %>
 <% else %>
-<%= link_to "Sign up", new_user_registration_path %>
-<%= link_to "Sign in", new_user_session_path %>
+<%= link_to "Sign up", new_user_registration_path, class:"btn btn-danger float-right mb-3 mt-3" %>
+<%= link_to "Sign in", new_user_session_path, class:"btn btn-danger float-right mb-3 mt-3" %>
 <% end %>
-
 </center>

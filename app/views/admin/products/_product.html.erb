@@ -1,0 +1,11 @@
+<tr>
+<div <%= product %> >
+  <td><%= product.id %></td>
+  <td><%= product.title %></td>
+	<td><%= product.description %></td>
+	<td><%= product.price %></td>
+  <td><%= button_to "Show", admin_product_path(product.id), method: :get %></td>
+  <td><%= button_to "Edit", edit_admin_product_path(product.id), method: :get %></td>
+  <td><%= button_to "Delete", admin_product_path(product.id), method: :delete %></td>
+</div>
+</tr>
