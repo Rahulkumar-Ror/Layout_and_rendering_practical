@@ -17,12 +17,14 @@
 		<%= render @products %>	
 	</table>
 </center>
+
 <center>
 <div>
   <%= link_to "Add a product", new_admin_product_path %></br>
 </div>
 <p>------------------------------------------------</p>
 </center>
+
 <center>
 <div>
   <%= button_to "sign Out", destroy_user_session_path(@order), method: :delete %>

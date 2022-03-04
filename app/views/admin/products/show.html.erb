@@ -23,14 +23,14 @@
 		<th>Quantity of order</th>
 		<th colspan=4 >Actions</th>
 	<% @product.orders.each do |order| %>
-			<tr>
-				<td><%= order.id %></td>
-				<td><%= order.quantity %></td>
-				<td><%= button_to "Show", admin_order_path(order.id),method: :get %></td>
-				<td><%= button_to "Edit", edit_admin_order_path(order.id),method: :get %></td>
-				<td><%= button_to "Delete", admin_order_path(order.id),method: :delete %></td> 
-				<td><%= button_to "Back", admin_products_path,method: :get %></td>
-			</tr>
+		<tr>
+			<td><%= order.id %></td>
+			<td><%= order.quantity %></td>
+			<td><%= button_to "Show", admin_order_path(order.id),method: :get %></td>
+			<td><%= button_to "Edit", edit_admin_order_path(order.id),method: :get %></td>
+			<td><%= button_to "Delete", admin_order_path(order.id),method: :delete %></td> 
+			<td><%= button_to "Back", admin_products_path,method: :get %></td>
+		</tr>
   <% end %>
   <% else %>
     <th >Not any order for this <b><%= @product.title %></b> product</th>
