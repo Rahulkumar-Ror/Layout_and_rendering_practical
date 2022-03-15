@@ -1,0 +1,14 @@
+<div class="col-lg-6 mx-lg-auto">
+<div class="card shadow">
+<div class="card-header">
+<h2 class="card-title text-center", style="color:red;">Order Detials</h2>
+<center>
+  <div class="col-lg-5 mb-3">
+    <div class="card" >
+      <div class="card-body">
+        <%= render @order %>
+      </div>
+    </div>
+  </div>
+  <td><%= button_to "Back ", admin_product_path(@order.product),method: :get, class:"btn btn-primary float-right mb-3 mt-3"  %></td
+</center>

@@ -1,0 +1,33 @@
+<div class="col-lg-6 mx-lg-auto">
+<div class="card shadow">
+<div class="card-header">
+<h2 class="card-title text-center", style="color:red;">Product</h2>
+
+<% if flash[:errors] %>
+  <% flash[:errors].each do |error| %>
+    <p style = "color:red"><%= error %></p>
+  <% end %>
+<% end %>
+
+<%= form_with model: [:admin, @product] do |form| %>
+
+<div>
+  <%= form.label :title %></br>
+	<%= form.text_field :title ,class: 'form-control', placeholder: 'Enter product title' %>
+</div>
+
+<div>
+  <%= form.label :description %><br/>
+	<%= form.text_area :description, class: 'form-control', placeholder: "Enter a product description" %>
+</div>
+
+<div>
+  <%= form.label :price %>
+	<%= form.number_field :price, class: 'form-control', placeholder: "$$$$$$$$$$$"  %>
+</div>
+
+<div>
+  <%= form.submit %>
+</div>
+
+<% end %>
